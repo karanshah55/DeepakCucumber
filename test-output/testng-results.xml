@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[==================================================]]>
+    </line>
+    <line>
+      <![CDATA[Testcase Start Time : 5_48_2_AM]]>
+    </line>
+    <line>
+      <![CDATA[==================================================]]>
+    </line>
+    <line>
+      <![CDATA[==================================================]]>
+    </line>
+    <line>
+      <![CDATA[Testcase End Time : 5_48_30_AM]]>
+    </line>
+    <line>
+      <![CDATA[==================================================]]>
+    </line>
+    <line>
+      <![CDATA[----------------------------------------------- BROWSER SERVICES DOESN'T CLOSE -----------------------------------------------]]>
+    </line>
+  </reporter-output>
+  <suite name="Karan Automation" duration-ms="32525" started-at="2018-12-23T00:17:59Z" finished-at="2018-12-23T00:18:31Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="TestNGCucumberRunner" duration-ms="32525" started-at="2018-12-23T00:17:59Z" finished-at="2018-12-23T00:18:31Z">
+      <class name="com.utility.cucumber.TestNGCukesRunner">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="setup" is-config="true" duration-ms="63" started-at="2018-12-23T05:47:59Z" finished-at="2018-12-23T05:47:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="beforeTest" is-config="true" duration-ms="7107" started-at="2018-12-23T05:47:59Z" finished-at="2018-12-23T05:48:06Z">
+          <reporter-output>
+            <line>
+              <![CDATA[==================================================]]>
+            </line>
+            <line>
+              <![CDATA[Testcase Start Time : 5_48_2_AM]]>
+            </line>
+            <line>
+              <![CDATA[==================================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="setUpClass" is-config="true" duration-ms="328" started-at="2018-12-23T05:48:06Z" finished-at="2018-12-23T05:48:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="feature" duration-ms="22807" started-at="2018-12-23T05:48:06Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-12-23T05:48:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Checkout of the products]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="tearDownClass" is-config="true" duration-ms="718" started-at="2018-12-23T05:48:29Z" finished-at="2018-12-23T05:48:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="afterTest" is-config="true" duration-ms="1447" started-at="2018-12-23T05:48:30Z" finished-at="2018-12-23T05:48:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[==================================================]]>
+            </line>
+            <line>
+              <![CDATA[Testcase End Time : 5_48_30_AM]]>
+            </line>
+            <line>
+              <![CDATA[==================================================]]>
+            </line>
+            <line>
+              <![CDATA[----------------------------------------------- BROWSER SERVICES DOESN'T CLOSE -----------------------------------------------]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.utility.cucumber.TestNGCukesRunner@3f49dace]" name="tearDown" is-config="true" duration-ms="350" started-at="2018-12-23T05:48:32Z" finished-at="2018-12-23T05:48:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.utility.cucumber.TestNGCukesRunner -->
+    </test> <!-- TestNGCucumberRunner -->
+  </suite> <!-- Karan Automation -->
+</testng-results>

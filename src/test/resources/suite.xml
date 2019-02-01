@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Karan Automation" verbose="2" parallel="classes">
+    <test name="TestNGCucumberRunner" >
+        <classes>
+            <class name="com.utility.cucumber.TestNGCukesRunner" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extentreports>
+    <configuration>
+        <encoding>UTF-8</encoding>
+        <documentTitle>Automation Reports</documentTitle>
+        <reportName>REPORT</reportName>
+        <reportHeadline>Version-1.0.0</reportHeadline>
+    </configuration>
+</extentreports>

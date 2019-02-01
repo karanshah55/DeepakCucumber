@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Karan Automation]" parallel="classes">
+  <test name="TestNGCucumberRunner">
+    <classes>
+      <class name="com.utility.cucumber.TestNGCukesRunner"/>
+    </classes>
+  </test> <!-- TestNGCucumberRunner -->
+</suite> <!-- Failed suite [Karan Automation] -->
