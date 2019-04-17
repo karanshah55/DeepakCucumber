@@ -27,7 +27,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 @CucumberOptions(
 		features = {"src/test/java/com/cucumber/features/"},
-		tags = {"@AstoLoginscenarios"},
+		tags = {"@AddProductsFunctionality1"},
 		glue = {"com.cucumber.stepdefinitions"},
 		plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","json:output/cucumber.json"}
 		)
