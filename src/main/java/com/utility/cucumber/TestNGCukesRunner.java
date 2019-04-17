@@ -15,7 +15,6 @@ import org.testng.annotations.BeforeTest;
 import com.cucumber.listener.ExtentProperties;
 import com.cucumber.listener.Reporter;
 import com.utility.file.Downloaded_Verifier;
-import com.utility.file.EmailHelper;
 import com.utility.selenium.BaseTestScript;
 
 import cucumber.api.CucumberOptions;
@@ -28,7 +27,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 @CucumberOptions(
 		features = {"src/test/java/com/cucumber/features/"},
-		tags = {"@Accessories"},
+		tags = {"@AstoLoginscenarios"},
 		glue = {"com.cucumber.stepdefinitions"},
 		plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","json:output/cucumber.json"}
 		)
@@ -82,18 +81,18 @@ public class TestNGCukesRunner extends AbstractTestNGCucumberTests {
 		Reporter.setSystemInfo("os", System.getProperty("os.name").toUpperCase());
 		Reporter.setTestRunnerOutput("Automation Reports");
 
-		String timestamp = BaseTestScript.dateAndSystemTime().replace(":", "_");
-		EmailHelper email = new EmailHelper();
-		Downloaded_Verifier download = new Downloaded_Verifier();
-		try {
-			download.ZipCreation();
-			download.moveFileFromSourceToDestination("Automation-Report.zip", BaseTestScript.REPORTLOCATION, System.getProperty("user.dir")+"/output/ReportHistory/"+timestamp );
-			if(BaseTestScript.MAILSEND.equalsIgnoreCase("yes")) {
-				email.sendMailViaGmail();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		String timestamp = BaseTestScript.dateAndSystemTime().replace(":", "_");
+//		EmailHelper email = new EmailHelper();
+//		Downloaded_Verifier download = new Downloaded_Verifier();
+//		try {
+//			download.ZipCreation();
+//			download.moveFileFromSourceToDestination("Automation-Report.zip", BaseTestScript.REPORTLOCATION, System.getProperty("user.dir")+"/output/ReportHistory/"+timestamp );
+//			if(BaseTestScript.MAILSEND.equalsIgnoreCase("yes")) {
+//				email.sendMailViaGmail();
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		System.out.println("verify report generation");
 	}
 }

@@ -20,4 +20,6 @@ public class AccessoriesPage extends BasePageObject{
 	public void appleTvAddToCart(){
 		prodPurchase.addToCart(appleTvAddToCart);
 	}
+	
+	
 }

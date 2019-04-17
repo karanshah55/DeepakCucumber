@@ -1,6 +1,5 @@
-/*
- *
- */
+
+//to make a zip file of a HTML report(used in HTML file report)
 package com.utility.file;
 
 import java.io.BufferedReader;
@@ -67,14 +66,8 @@ public class Downloaded_Verifier extends BaseTestScript
 	/** The logger. */
 	Logger logger = Logger.getLogger(Downloaded_Verifier.class);
 
-	/**
-	 * Verify document downloaded.
-	 *
-	 * @author GS-1629
-	 * @param docName the doc name
-	 * @return true, if successful
-	 * @throws InterruptedException the interrupted exception
-	 */
+	
+	
 	public boolean verifyDocumentDownloaded(String docName) throws InterruptedException
 	{
 		return verifyDocumentDownloaded(docName, 0);
