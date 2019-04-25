@@ -33,70 +33,47 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-
-/**
- * @author GS-1629
- * The Class BaseTestScript for loading all browser related settings
- */
 // ---------------------------------------------- BaseTestScript (BaseClass) for All TestScripts ---------------------------------------------
 public class BaseTestScript
 {
 
-	/** The selenium. */
+	
 	public static WebDriver driver = null;
 
-	/** The ip. */
 	private static String IP = "";
 
-	/** The current username. */
 	private static String CURRENT_USERNAME=System.getProperty("user.name");
 
-	/** The browser. */
 	public static String BROWSER;
 
-	/** The application url. */
 	public static String APPLICATIONURL;
 
-	/** The username. */
 	public static String USERNAME;
 
-	/** The password. */
 	public static String PASSWORD;
 
-	/** The report location. */
 	public static String REPORTLOCATION;
 
-	/** The mail send. */
 	public static String MAILSEND;
 
-	/** The mail from. */
 	public static String MAILFROM;
 
-	/** The mail mailhost. */
 	public static String MAILHOST;
 
-	/** The mail to. */
 	public static String MAILTO;
 
-	/** The mail subject. */
 	public static String MAILSUBJECT;
 
-	/** The mail sub prefix. */
 	public static String MAILSUBPREFIX;
 
-	/** The db domain. */
 	public static String DBDOMAIN;
 
-	/** The db port. */
 	public static String DBPORT;
 
-	/** The db username. */
 	public static String DBUSERNAME;
 
-	/** The db password. */
 	public static String DBPASSWORD;
 
-	/** The db name. */
 	public static String DBNAME;
 
 	/** The api accept type. */
@@ -105,13 +82,11 @@ public class BaseTestScript
 	/** The api content type. */
 	public static String APICONTENTTYPE;
 
-	/** The logger. */
 	public static final Logger logger = Logger.getLogger(BaseTestScript.class);
 
-	/**
-	 * @author GS-1629
-	 * Static block for load property which load required configuration.
-	 */
+	
+	//Static block for loading property which load required configuration
+	//this block will be called as soon as this class gets loaded into the memory
 	static{
 		FileReader propReader = null;
 		try {
@@ -161,9 +136,6 @@ public class BaseTestScript
 
 	/**
 	 * Before test will load browser and initialized webdriver object.
-	 *
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 * @throws InterruptedException the interrupted exception
 	 */
 	// ----------------------------------------------- Always Run First for Test and Initialize WebDriver ----------------------------------------
 	@BeforeTest
@@ -184,10 +156,7 @@ public class BaseTestScript
 		logger.info("===============================================");
 	}
 
-	/**
-	 * This method will use for note test case start time.
-	 * @author GS-1629
-	 */
+	
 	@BeforeClass
 	public void testCaseStartTime()
 	{
@@ -196,10 +165,7 @@ public class BaseTestScript
 		Reporter.log("==================================================");
 	}
 
-	/**
-	 * This method will use for note test case end time.
-	 * @author GS-1629
-	 */
+	
 	@AfterClass
 	public void testCaseEndTime()
 	{
@@ -208,12 +174,7 @@ public class BaseTestScript
 		Reporter.log("==================================================");
 	}
 
-	/**
-	 * Before method.
-	 * @author GS-1629
-	 * @throws InterruptedException the interrupted exception
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 */
+	
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException, IOException
 	{
@@ -226,9 +187,7 @@ public class BaseTestScript
 	/**
 	 * This method will close browser and quite selenium session and terminate execution
 	 * This will execute at the end of execution.
-	 * @author GS-1629
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 */
+	*/
 	// ---------------------------------------------- Always Run Last for Test and Close Browser and quit to WebDriver ----------------------------
 	@AfterTest
 	public void afterTest() throws IOException
@@ -274,10 +233,6 @@ public class BaseTestScript
 
 	/**
 	 * Gets the selenium (Load Driver as per given browser in property file).
-	 * @author GS-1629
-	 * @return the selenium
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 * @throws InterruptedException the interrupted exception
 	 */
 	// -------------------------------------------------- Find Driver which given from properties ------------------------------------------------
 	protected WebDriver getSelenium() throws IOException, InterruptedException
@@ -341,11 +296,6 @@ public class BaseTestScript
 		return null;
 	}
 
-	/**
-	 * Generate System time in 12 Hrs format.
-	 * @author GS-1629
-	 * @return the string
-	 */
 	protected String systemTime()
 	{
 		Calendar calendar = new GregorianCalendar();
@@ -378,12 +328,7 @@ public class BaseTestScript
 		return dateFormat.format(date);
 	}
 
-	/**
-	 * Date and system time.
-	 * @author GS-1629
-	 * @param dateAndTimeFormat the date and time format
-	 * @return the string
-	 */
+	
 	public static String dateAndSystemTime(String dateAndTimeFormat)
 	{
 		DateFormat dateFormat = new SimpleDateFormat(dateAndTimeFormat);
@@ -393,7 +338,6 @@ public class BaseTestScript
 
 	/**
 	 * Gets the alert.
-	 * @author GS-1629
 	 * @param message the message
 	 * @param second the second
 	 * @return the alert
@@ -412,34 +356,19 @@ public class BaseTestScript
 		}
 	}
 
-	/**
-	 * Gets the random string.
-	 * @author GS-1629
-	 * @param lenghtOfNumber the lenght of number
-	 * @return the random string
-	 */
+	
 //	protected String getRandomString(int lenghtOfNumber)
 //	{
 //		return RandomStringUtils.randomAlphabetic(lenghtOfNumber);
 //	}
 
-	/**
-	 * Generate random number.
-	 * @author GS-1629
-	 * @param charLength the char length
-	 * @return the string
-	 */
+	
 //	protected String GenerateRandomNumber(int charLength)
 //	{
 //		return RandomStringUtils.randomNumeric(charLength);
 //	}
 
-	/**
-	 * Timeout will wait execution for given time period.
-	 * @author GS-1629
-	 * @param second the second
-	 * @throws InterruptedException the interrupted exception
-	 */
+	
 	protected void timeout(int second) throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(second, TimeUnit.SECONDS);

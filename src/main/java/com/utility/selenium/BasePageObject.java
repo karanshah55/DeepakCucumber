@@ -43,6 +43,7 @@ public class BasePageObject<T>
 	
 	
 	//instance block - just like default constructor but executes before constructor
+	// first Static block, then instance, then constructor, then object created classes
 	{
 		driver = BaseTestScript.driver;
 		PropertyConfigurator.configure("configuration/log4j.properties");
@@ -113,9 +114,11 @@ public class BasePageObject<T>
 */
 	}
 
-	public void aactiveElement(){
+	
+	public void activeElement(){
 		driver.switchTo().activeElement();
 	}
+	
 	
 	public void sendKeysWait(By by, String keysToSend, boolean cleanElement) {
 		try
